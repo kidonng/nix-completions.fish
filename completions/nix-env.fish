@@ -35,6 +35,23 @@ complete -c nix-env -n "__fish_seen_argument -l install -s i" -l from-profile -d
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l preserve-installed -s P -d "Do not remove derivations with the same name"
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l remove-all -s r -d "Remove all previously installed packages prior to installing"
 
+# OPERATION --QUERY
+complete -c nix-env -n __fish_use_subcommand -a "--query -q" -d "List information about derivations"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l installed
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l available -s a -d "Display all installable derivations"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l status -s s -d "Print status of derivation"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l attr-path -s P -d "print attribute path of derivations"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l no-name
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l compare-versions -s c -d "compare installed and available version"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l system
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l drv-path
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l out-path
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l description
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l meta
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l xml
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l json
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l prebuilt-only -s b -d "Fail if there is no pre-built binary available"
+
 # OPERATION --SWITCH-PROFILE
 complete -c nix-env -n __fish_use_subcommand -a "--switch-profile -S" -d "Set the current profile path"
 

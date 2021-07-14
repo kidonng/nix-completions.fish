@@ -30,4 +30,5 @@ Many descriptions are ported from [ZSH Completions for Nix and NixOS](https://gi
 - `nix-env`
   - [x] Common options
   - [x] `--install/-i`
+  - [x] `--query/-q`
   - [x] Profile commands
