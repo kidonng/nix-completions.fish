@@ -1,6 +1,6 @@
 complete -c nix-env -x
 
-# COMMON OPTIONS
+# Common options
 complete -c nix-env -l file -s f -d "Specify Nix expression used to obtain derivations"
 complete -c nix-env -l profile -s p -d "Specify the profile to use"
 complete -c nix-env -l dry-run
@@ -27,7 +27,7 @@ complete -c nix-env -s I
 complete -c nix-env -l option
 complete -c nix-env -l repair
 
-# OPERATION --INSTALL
+# Operation --install
 complete -c nix-env -n __fish_use_subcommand -a "--install -i" -d "Install package"
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l prebuilt-only -s b -d "Fail if there is no pre-built binary available"
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l from-expressions
@@ -35,34 +35,53 @@ complete -c nix-env -n "__fish_seen_argument -l install -s i" -l from-profile -d
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l preserve-installed -s P -d "Do not remove derivations with the same name"
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l remove-all -s r -d "Remove all previously installed packages prior to installing"
 
-# OPERATION --QUERY
+# Operation --upgrade
+complete -c nix-env -n __fish_use_subcommand -a "--upgrade -u" -d "Upgrade package"
+complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l prebuilt-only -s b -d "Fail if there is no pre-built binary available"
+complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l from-expressions
+complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l from-profile -d "Fetch store paths from another profile"
+complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l lt -d "Upgrade derivations with newer versions (default)"
+complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l leq -d "Upgrade derivations with the same or newer version"
+complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l eq -d "Upgrade derivations with equivalent versions"
+complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l always -d "Upgrade even if version number decreases"
+
+# Operation --uninstall
+complete -c nix-env -n __fish_use_subcommand -a "--uninstall -e" -d "Uninstall package"
+
+# Operation --set
+complete -c nix-env -n __fish_use_subcommand -a --set -d "Modify profile to only contain specified derivation"
+
+# Operation --set-flag
+complete -c nix-env -n __fish_use_subcommand -a --set-flag -d "Modify meta attribute of installed package"
+
+# Operation --query
 complete -c nix-env -n __fish_use_subcommand -a "--query -q" -d "List information about derivations"
 complete -c nix-env -n "__fish_seen_argument -l query -s q" -l installed
 complete -c nix-env -n "__fish_seen_argument -l query -s q" -l available -s a -d "Display all installable derivations"
 complete -c nix-env -n "__fish_seen_argument -l query -s q" -l status -s s -d "Print status of derivation"
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l attr-path -s P -d "print attribute path of derivations"
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l no-name
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l compare-versions -s c -d "compare installed and available version"
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l system
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l drv-path
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l out-path
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l description
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l meta
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l xml
-complete -c nix-env -n "__fish_seen_argument -l query -s q" -l json
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l attr-path -s P -d "Print attribute path of derivations"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l no-name -d "Suppress printing of name attribute"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l compare-versions -s c -d "Compare installed and available version"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l system -d "Print system attribute"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l drv-path -d "Print store derivation path"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l out-path -d "Print output path"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l description -d "Print description"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l meta -d "Print all meta attributes (only available with --xml)"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l xml -d "Print output as xml"
+complete -c nix-env -n "__fish_seen_argument -l query -s q" -l json -d "Print output as json"
 complete -c nix-env -n "__fish_seen_argument -l query -s q" -l prebuilt-only -s b -d "Fail if there is no pre-built binary available"
 
-# OPERATION --SWITCH-PROFILE
+# Operation --switch-profile
 complete -c nix-env -n __fish_use_subcommand -a "--switch-profile -S" -d "Set the current profile path"
 
-# OPERATION --LIST-GENERATIONS
+# Operation --list-generations
 complete -c nix-env -n __fish_use_subcommand -a --list-generations -d "Print a list of all generations in the active profile"
 
-# OPERATION --DELETE-GENERATIONS
+# Operation --delete-generations
 complete -c nix-env -n __fish_use_subcommand -a --delete-generations -d "Delete specified generations"
 
-# OPERATION --SWITCH-GENERATION
+# Operation --switch-generation
 complete -c nix-env -n __fish_use_subcommand -a "--switch-generation -G" -d "Activate specified generation"
 
-# OPERATION --ROLLBACK
+# Operation --rollback
 complete -c nix-env -n __fish_use_subcommand -a --rollback -d "Switch to the previous generation of active profile"
