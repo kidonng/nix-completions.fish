@@ -30,7 +30,8 @@ Many descriptions are ported from [ZSH Completions for Nix and NixOS](https://gi
 - `nix-channel`
 - `nix-collect-garbage`
 - `nix-copy-closure`
-- `nix-hash`
 - `nix-env`
   - [x] Common options
   - [x] Subcommands
+- `nix-hash`
+- `nix-prefetch-url`
