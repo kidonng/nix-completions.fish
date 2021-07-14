@@ -29,6 +29,7 @@ Many descriptions are ported from [ZSH Completions for Nix and NixOS](https://gi
   - [x] Subcommands
 - `nix-channel`
 - `nix-collect-garbage`
+- `nix-copy-closure`
 - `nix-env`
   - [x] Common options
   - [x] Subcommands
