@@ -35,7 +35,7 @@ Many descriptions are ported from [ZSH Completions for Nix and NixOS](https://gi
   - [x] Common options
   - [x] Subcommands
 - `nix-hash`
-- [ ] `nix-instantiate`
+- `nix-instantiate`
 - `nix-prefetch-url`
 - [ ] `nix-shell`
 - [ ] `nix-store`
