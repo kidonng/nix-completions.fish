@@ -85,3 +85,5 @@ complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set
 
 # Operation --rollback
 complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a --rollback -d "Switch to the previous generation of active profile"
+
+complete -c nix-env -n "__fish_seen_argument -l delete-generations -l switch-generation -s G" -a "(nix-env --list-generations | string split -f 2 ' ')"
