@@ -28,7 +28,7 @@ complete -c nix-env -l option
 complete -c nix-env -l repair
 
 # Operation --install
-complete -c nix-env -l install -s i -d "Install package"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a "--install -i" -d "Install package"
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l prebuilt-only -s b -d "Fail if there is no pre-built binary available"
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l from-expressions
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l from-profile -d "Fetch store paths from another profile"
@@ -36,7 +36,7 @@ complete -c nix-env -n "__fish_seen_argument -l install -s i" -l preserve-instal
 complete -c nix-env -n "__fish_seen_argument -l install -s i" -l remove-all -s r -d "Remove all previously installed packages prior to installing"
 
 # Operation --upgrade
-complete -c nix-env -l upgrade -s u -d "Upgrade package"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a "--upgrade -u" -d "Upgrade package"
 complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l prebuilt-only -s b -d "Fail if there is no pre-built binary available"
 complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l from-expressions
 complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l from-profile -d "Fetch store paths from another profile"
@@ -46,16 +46,16 @@ complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l eq -d "Upgrade 
 complete -c nix-env -n "__fish_seen_argument -l upgrade -s u" -l always -d "Upgrade even if version number decreases"
 
 # Operation --uninstall
-complete -c nix-env -l uninstall -s e -d "Uninstall package"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a "--uninstall -e" -d "Uninstall package"
 
 # Operation --set
-complete -c nix-env -l set -d "Modify profile to only contain specified derivation"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a --set -d "Modify profile to only contain specified derivation"
 
 # Operation --set-flag
-complete -c nix-env -l set-flag -d "Modify meta attribute of installed package"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a --set-flag -d "Modify meta attribute of installed package"
 
 # Operation --query
-complete -c nix-env -l query -s q -d "List information about derivations"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a "--query -q" -d "List information about derivations"
 complete -c nix-env -n "__fish_seen_argument -l query -s q" -l installed
 complete -c nix-env -n "__fish_seen_argument -l query -s q" -l available -s a -d "Display all installable derivations"
 complete -c nix-env -n "__fish_seen_argument -l query -s q" -l status -s s -d "Print status of derivation"
@@ -72,16 +72,16 @@ complete -c nix-env -n "__fish_seen_argument -l query -s q" -l json -d "Print ou
 complete -c nix-env -n "__fish_seen_argument -l query -s q" -l prebuilt-only -s b -d "Fail if there is no pre-built binary available"
 
 # Operation --switch-profile
-complete -c nix-env -l switch-profile -s S -d "Set the current profile path"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a "--switch-profile -S" -d "Set the current profile path"
 
 # Operation --list-generations
-complete -c nix-env -l list-generations -d "Print a list of all generations in the active profile"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a --list-generations -d "Print a list of all generations in the active profile"
 
 # Operation --delete-generations
-complete -c nix-env -l delete-generations -d "Delete specified generations"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a --delete-generations -d "Delete specified generations"
 
 # Operation --switch-generation
-complete -c nix-env -l switch-generation -s G -d "Activate specified generation"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a "--switch-generation -G" -d "Activate specified generation"
 
 # Operation --rollback
-complete -c nix-env -l rollback -d "Switch to the previous generation of active profile"
+complete -c nix-env -n "__fish_not_contain_opt install upgrade uninstall set set-flag query switch-profile list-generations delete-generations switch-generation rollback -s i -s u -s e -s q -s S -s G" -a --rollback -d "Switch to the previous generation of active profile"

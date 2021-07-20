@@ -27,6 +27,7 @@ Many descriptions are ported from [ZSH Completions for Nix and NixOS](https://gi
 - `nix`
   - [x] Common options
   - [x] Subcommands
+- [ ] nix-build
 - `nix-channel`
 - `nix-collect-garbage`
 - `nix-copy-closure`
@@ -34,4 +35,7 @@ Many descriptions are ported from [ZSH Completions for Nix and NixOS](https://gi
   - [x] Common options
   - [x] Subcommands
 - `nix-hash`
+- [ ] `nix-instantiate`
 - `nix-prefetch-url`
+- [ ] `nix-shell`
+- [ ] `nix-store`
