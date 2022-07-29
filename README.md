@@ -1,5 +1,7 @@
 # ❄️🐟 Nix completions.fish
 
+> **Note**: [Fish completion for `nix` command](https://github.com/NixOS/nix/blob/master/misc/fish/completion.fish) is added in Nix 2.4. You may not need this plugin. 
+
 > 🚧 This project is a work in progress.
 >
 > Due to the nature of shell completions, corrections and improvements are always welcome.
