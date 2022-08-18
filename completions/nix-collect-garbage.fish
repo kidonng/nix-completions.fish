@@ -1,6 +1,6 @@
-complete -c nix-collect-garbage -x
+complete nix-collect-garbage --exclusive
 
-complete -c nix-collect-garbage -l delete-old -s d -d "Delete all old generations of all profiles"
-complete -c nix-collect-garbage -l delete-older-than -d "Delete generations older than the given time"
-complete -c nix-collect-garbage -l max-freed
-complete -c nix-collect-garbage -l dry-run
+complete nix-collect-garbage -l delete-old -s d -d "Delete all old generations of all profiles"
+complete nix-collect-garbage -l delete-older-than -d "Delete generations older than the given time"
+complete nix-collect-garbage -l max-freed
+complete nix-collect-garbage -l dry-run
